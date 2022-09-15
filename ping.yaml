@@ -1,5 +1,6 @@
 ---
 - name: Check connectivity to remote servers
+  remote_user: ubuntu
   hosts: lab_servers #All
   gather_facts: false
   tasks:
