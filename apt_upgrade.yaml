@@ -1,4 +1,7 @@
 ---
 - name: Upgrade all apt packages
   hosts: lab_servers
-  apt: upgrade=dist force_apt_get=yes
+  become: true
+  apt:
+    upgrade: yes
+    update_cache: yes
